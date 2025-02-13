@@ -1,0 +1,80 @@
+[
+    {
+        "service_type": "সভাপতি",
+        "service_name": "আতিকুর রহমান মজুমদার",
+        "img_url" : "https://i.ibb.co.com/9QyVmB2/IMG-20241011-191843-Shuvo-Mozumder.jpg",
+        "description": "Manages job postings, applications, and streamlines the recruitment process."
+    },
+    {
+        "service_type": "সহ সভাপতি",
+        "service_name": "কাজী মুহাম্মদ আল সাইফ",
+        "img_url" : "https://i.ibb.co.com/XZCp4qY0/download-1.png",
+        "description": "Automates and simplifies the new hire process, ensuring a smooth transition."
+    },
+    {
+        "service_type": "সাধারণ সম্পাদক",
+        "service_name": "মোঃ শাহরিয়ার হায়দার",
+        "img_url" : "https://i.ibb.co.com/5g0BQBfr/inbound8062691898199551674-S-H-Abir.jpg",
+        "description": "Tracks employee hours, automates timesheets, and manages leave requests."
+    },
+    {
+        "service_type": "যুগ্ম সাধারণ সম্পাদক",
+        "service_name": "মোঃ শাহাদাত হোসেন",
+        "img_url" : "https://i.ibb.co.com/0V2PGgjF/35550-1-Md-Sahadat.jpg",
+        "description": "Calculates salaries and taxes, automates payroll processing, and ensures timely payments."
+    },
+    {
+        "service_type": "যুগ্ম সাধারণ সম্পাদক",
+        "service_name": "মোঃ জোবায়ের",
+        "img_url" : "https://i.ibb.co.com/BVtqYJp1/inbound7819440411841199307-Mohammed-jobayer.jpg",
+        "description": "Enables employees to enroll in benefits programs, manage their accounts, and submit claims."
+    },
+    {
+        "service_type": "সাংগঠনিক সম্পাদক",
+        "service_name": "কাজী জাহেদুল কাউছার",
+        "img_url" : "https://i.ibb.co.com/XZCp4qY0/download-1.png",
+        "description": "Facilitates setting goals, tracking employee progress, and providing performance feedback."
+    },
+    {
+        "service_type": "সাংগঠনিক সম্পাদক",
+        "service_name": "সাজেদা আক্তার সায়মা",
+        "img_url" : "https://i.ibb.co.com/XZCp4qY0/download-1.png",
+        "description": "Third-party handles calculation, distribution of paychecks, and tax withholdings."
+    },
+    {
+        "service_type": "প্রচার সম্পাদক",
+        "service_name": "মোসাইয়েব ইসলাম",
+        "img_url" : "https://i.ibb.co.com/7dBt2T0s/20241218-130655-Mosaiyeb-Meheraz-SWE.jpg",
+        "description": "Outsourcing management of employee benefits plans, enrollment, and claims processing."
+    },
+    {
+        "service_type": "সহ প্রচার সম্পাদক",
+        "service_name": "সাইফুল ইসলাম",
+        "img_url" : "https://i.ibb.co.com/QvFXpv2q/inbound8679941522242345767-NOOB-GAMING-F-F.jpg",
+        "description": "Ensures company adherence to labor laws and regulations, mitigating legal risks."
+    },
+    {
+        "service_type": "অর্থ সম্পাদক",
+        "service_name": "মোঃ হানিফ সাগর",
+        "img_url" : "https://i.ibb.co.com/XZCp4qY0/download-1.png",
+        "description": "Provides guidance and strategies to minimize risks associated with employee relations and lawsuits."
+    },
+    {
+        "service_type": "সহ অর্থ সম্পাদক",
+        "service_name": "তানভীর হোসেন",
+        "img_url" : "https://i.ibb.co.com/35WtBwGK/2024-05-12-01-41-IMG-4944-Tanvir-Hossain.jpg",
+        "description": "Offers expertise and advice on best practices in HR management, policies, and procedures."
+    },
+    {
+        "service_type": "দপ্তর সম্পাদক",
+        "service_name": "মহিন উদ্দিন মেহেদী",
+        "img_url" : "https://i.ibb.co.com/XZCp4qY0/download-1.png",
+        "description": "Comprehensive software and service package for all your employee management needs."
+    },
+    {
+        "service_type": "সহ দপ্তর সম্পাদক",
+        "service_name": "সামিহ আল মাহমুদ",
+        "img_url" : "https://i.ibb.co.com/xKLBXZD9/IMG-3016-Samih-Al-Hoque-Senen.jpg",
+        "description": "Tracks employee training records, manages course enrollment, and delivers online learning programs (may be offered as software or service)."
+    }
+]
