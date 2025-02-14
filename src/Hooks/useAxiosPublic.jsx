@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosPublic = axios.create({
-    baseURL: 'https://employ-ease2.vercel.app'
+    baseURL: 'https://fci-blood-donation-group.vercel.app'
 })
 const useAxiosPublic = () => {
     return axiosPublic;

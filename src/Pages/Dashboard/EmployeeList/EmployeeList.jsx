@@ -21,7 +21,7 @@ const EmployeeList = () => {
     });
   const [employees, setEmployees] = useState([]);
   useEffect(() => {
-    fetch("https://employ-ease2.vercel.app/employees")
+    fetch("https://fci-blood-donation-group.vercel.app/employees")
       .then((res) => res.json())
       .then((data) => setEmployees(data));
   }, []);

@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
-import { FcGoogle } from "react-icons/fc";
+// import { FcGoogle } from "react-icons/fc";
 import { Link, useNavigate } from "react-router-dom";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import { useContext } from "react";
@@ -36,16 +36,18 @@ const SignUp = () => {
       // now send the user info data to the server with the imageURL
       const user = {
         name: data.name,
-        designation: data.designation,
-        salary: parseFloat(data.salary),
+        // salary: parseFloat(data.salary),
         email: data.email,
-        bank_account_no: parseFloat(data.bank_account_no),
+        phone_number: parseFloat(data.phone_number),
+        batchNo: data.batchNo,
+        bloodGroup: data.bloodGroup,
         image: res.data.data.display_url,
-        role: "employee",
+        password: data.password,
+        role: "volunteer",
         verify: "false"
       };
       //
-      const userRes = await axiosPublic.post("/users", user);
+      const userRes = await axiosPublic.post("/volunteers", user);
       console.log(userRes.data);
       if (userRes.data.insertedId) {
         // show success pop up
@@ -62,13 +64,14 @@ const SignUp = () => {
           // TODO : create user info in database
           const userInfo = {
             name: data.name,
-            designation: data.designation,
-            salary: parseFloat(data.salary),
+            batchNo: data.batchNo,
+            // salary: parseFloat(data.salary),
             email: data.email,
-            bank_account_no: data.bank_account_no,
+            bloodGroup: data.bloodGroup,
+            phone_number: data.phone_number,
             image: res.data.data.display_url,
           };
-          axiosPublic.post("/users", userInfo).then((res) => {
+          axiosPublic.post("/volunteers", userInfo).then((res) => {
             if (res.data.insertedId) {
               console.log("user added to database");
               reset();
@@ -90,22 +93,18 @@ const SignUp = () => {
   return (
     <div>
       <Helmet>
-        <title>EmployEase | Register</title>
+        <title>FCI BDG | Register</title>
       </Helmet>
 
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold">Sign Up now!</h1>
-            <p className="py-6">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
-            </p>
+            
           </div>
           <div className="card shrink-0 w-full max-w-lg shadow-2xl bg-base-100">
-            <form onSubmit={handleSubmit(onSubmit)}>
-              <div className="flex gap-4">
+            <form className="p-2" onSubmit={handleSubmit(onSubmit)}>
+              <div className="lg:flex gap-4">
                 <div className="form-control">
                   <label className="label">
                     <span className="label-text">Name</span>
@@ -137,26 +136,26 @@ const SignUp = () => {
                   )}
                 </div>
               </div>
-              <div className="flex gap-4">
+              <div className="lg:flex gap-4">
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text">Bank Account No.</span>
+                    <span className="label-text">Phone Number</span>
                   </label>
                   <input
                     type="number"
-                    placeholder="Bank Account No. "
-                    name="bank_account_no"
-                    {...register("bank_account_no", { required: true })}
+                    placeholder="Phone Number"
+                    name="phone_number"
+                    {...register("phone_number", { required: true })}
                     className="input input-bordered"
                   />
                   {errors.email && (
                     <span className="text-red-600">
-                      Bank Account is required
+                      Phone Number is required
                     </span>
                   )}
                 </div>
 
-                <div className="form-control">
+                {/* <div className="form-control">
                   <label className="label">
                     <span className="label-text">Salary</span>
                   </label>
@@ -170,27 +169,71 @@ const SignUp = () => {
                   {errors.email && (
                     <span className="text-red-600">Salary is required</span>
                   )}
-                </div>
+                </div> */}
               </div>
               <div className="form-control w-full my-6">
                 <div className="label">
-                  <span className="label-text">Designation*</span>
+                  <span className="label-text">FCI Batch</span>
                 </div>
                 <select
                   defaultValue="default"
-                  {...register("designation", { required: true })}
+                  {...register("batchNo", { required: true })}
                   className="select select-bordered w-full"
                 >
                   <option disabled value="default">
-                    Select a Designation
+                    Select Your Batch No.
                   </option>
-                  <option value="sales_assistant">Sales Assistant</option>
-                  <option value="social_media_executive">
-                    Social Media executive
-                  </option>
-                  <option value="digital_marketer">Digital Marketer</option>
+                  <option value="Non FCI'an">I am not a FCI Student</option>
+                  <option value="1">1st</option>
+                  <option value="2">2nd</option>
+                  <option value="3">3rd</option>
+                  <option value="4">4th</option>
+                  <option value="5">5th</option>
+                  <option value="6">6th</option>
+                  <option value="7">7th</option>
+                  <option value="8">8th</option>
+                  <option value="9">9th</option>
+                  <option value="10">10th</option>
+                  <option value="11">11th</option>
+                  <option value="12">12th</option>
+                  <option value="13">13th</option>
+                  <option value="14">14th</option>
+                  <option value="15">15th</option>
+                  <option value="16">16th</option>
+                  <option value="17">17th</option>
+                  <option value="18">18th</option>
+                  <option value="19">19th</option>
+                  <option value="20">20th</option>
+                  <option value="21">21st</option>
                 </select>
               </div>
+
+
+              <div className="form-control w-full my-6">
+                <div className="label">
+                  <span className="label-text">Blood Group</span>
+                </div>
+                <select
+                  defaultValue="default"
+                  {...register("bloodGroup", { required: true })}
+                  className="select select-bordered w-full"
+                >
+                  <option disabled value="default">
+                    Select Your Blood Group
+                  </option>
+                  <option value="A+">A+</option>
+                  <option value="O+">O+</option>
+                  <option value="B+">B+</option>
+                  <option value="AB+">AB+</option>
+                  <option value="A-">A-</option>
+                  <option value="O-">O-</option>
+                  <option value="B-">B-</option>
+                  <option value="AB-">AB-</option>
+                </select>
+              </div>
+
+
+
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Password</span>
@@ -226,11 +269,6 @@ const SignUp = () => {
                     and one special character
                   </p>
                 )}
-                <label className="label">
-                  <a href="#" className="label-text-alt link link-hover">
-                    Forgot password?
-                  </a>
-                </label>
                 <div className="form-control w-full my-6">
                   <p>Upload Profile Picture</p>
                   <input
@@ -243,13 +281,13 @@ const SignUp = () => {
               </div>
               <div className="form-control mt-6">
                 <input
-                  className="btn btn-primary"
+                  className="btn btn-primary text-white"
                   type="submit"
                   value="Sign Up"
                 />
               </div>
             </form>
-            <FcGoogle className="w-full btn btn-ghost"></FcGoogle>
+            {/* <FcGoogle className="w-full btn btn-ghost"></FcGoogle> */}
             <p className="text-center pb-6">
               <small>
                 Already Have an Account?

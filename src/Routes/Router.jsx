@@ -16,6 +16,9 @@ import Payment from "../Pages/Dashboard/Payment/Payment";
 import Profile from "../Pages/Profile/Profile";
 import Messages from "../Pages/Dashboard/Messages/Messages";
 import AllVolunteers from "../Pages/Shared/AllVOlunteers/AllVolunteers";
+import PendingVolunteers from "../Pages/Dashboard/PendingVolunteers/PendingVolunteers";
+import VerifiedVolunteers from "../Pages/Dashboard/VerifiedVolunteers/VerifiedVolunteers";
+import Feedback from "../Pages/Dashboard/Feedback/Feedback";
 
 export const router = createBrowserRouter([
   {
@@ -40,11 +43,27 @@ export const router = createBrowserRouter([
         },
         {
           path: "/all-volunteers",
-          element: <AllVolunteers></AllVolunteers>
+          element: <AllVolunteers></AllVolunteers>,
+          loader: () => fetch('https://fci-blood-donation-group.vercel.app/volunteers')
         },
         {
           path: "/profile",
           element: <Profile></Profile>
+        },
+        {
+          path: "/pending-volunteers",
+          element: <PendingVolunteers></PendingVolunteers>,
+          loader: () => fetch('https://fci-blood-donation-group.vercel.app/pending-volunteers')
+        },
+        {
+          path: "/verified-volunteers",
+          element: <VerifiedVolunteers></VerifiedVolunteers>,
+          loader: () => fetch('https://fci-blood-donation-group.vercel.app/verified-volunteers')
+        },
+        {
+          path: "/feedbacks",
+          element: <Feedback></Feedback>,
+          loader: () => fetch('https://fci-blood-donation-group.vercel.app/feedbacks')
         }
     ]
   },
@@ -64,7 +83,7 @@ export const router = createBrowserRouter([
       {
         path: 'messages',
         element: <Messages></Messages>,
-        loader: () => fetch('https://employ-ease2.vercel.app/messages')
+        loader: () => fetch('https://fci-blood-donation-group.vercel.app/messages')
       },
       // hr route only
       {
@@ -74,17 +93,17 @@ export const router = createBrowserRouter([
       {
         path: 'employee-list/employee-details/:id',
         element: <EmployeeDetails></EmployeeDetails>,
-        loader: ({params}) => fetch(`https://employ-ease2.vercel.app/employee-details/${params.id}`)
+        loader: ({params}) => fetch(`https://fci-blood-donation-group.vercel.app/employee-details/${params.id}`)
       },
       {
         path: 'employee-list/payment/:id',
         element: <Payment></Payment>,
-        loader: ({params}) => fetch(`https://employ-ease2.vercel.app/payment/${params.id}`)
+        loader: ({params}) => fetch(`https://fci-blood-donation-group.vercel.app/payment/${params.id}`)
       },
       {
         path: 'progress',
         element: <Progress></Progress>,
-        loader: () => fetch('https://employ-ease2.vercel.app/worksheet')
+        loader: () => fetch('https://fci-blood-donation-group.vercel.app/worksheet')
       },
       // employee route only
       {

@@ -1,19 +1,19 @@
-## Website Name: EmployEase
-## Live Link: https://employ-ease.web.app/
+## Website Name: FCI Blood Donation Group
+## Live Link: Not Deployed
 
-Admin Email : mosaiyebmeheraz@gmail.com
-Password : 123456Mm@
+Admin Email : 
+Password : 
 
 ------------------------------------
-HR Email : meheraz1100@gmail.com
-Password : 123456Mm@
+HR Email : 
+Password : 
 
 # How to Run this Application? 
 ## Follow this steps: 
 
 ### Firstly Clone this Project
 ```
-https://github.com/meheraz1100/EmployEase-client.git
+https://github.com/meheraz1100/----
 ```
 
 ### Install the Dependencies
@@ -28,20 +28,3 @@ npm run dev
 
 
 ## Features
-# ----Admin------
-* Admin can fire Anyone 
-* Admin can make HR to employee
-* Admin can added another Admin
-* Admin can check messages from Website visitor
-
-
-# ----HR------
-* HR can see whole details of a normal employee excluding Admin
-* HR can verify a employee (Default : Verify : False)
-* HR can the Progess which is submitted by all employees
-* HR can pay the salary of employees
-
-
-# ----Employee------
-* Employee can submit a worksheet for HR
-* Each Employee can see their payment history

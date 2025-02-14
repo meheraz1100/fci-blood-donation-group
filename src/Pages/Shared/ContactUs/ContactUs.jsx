@@ -6,14 +6,14 @@ const ContactUs = () => {
     e.preventDefault();
     const form = e.target;
     const name = form.name.value;
-    const email = form.email.value;
+    const phone = form.phone.value;
     const message = form.message.value;
 
-    const newMessage = {name, email, message}
+    const newMessage = {name, phone, message}
 
     console.log(newMessage)
 
-    fetch('https://employ-ease2.vercel.app/messages', {
+    fetch('https://fci-blood-donation-group.vercel.app/feedbacks', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
@@ -60,12 +60,12 @@ const ContactUs = () => {
         </div>
         <div>
           <label htmlFor="email" className="text-sm">
-            Email
+            Phone
           </label>
           <input
-            id="email"
-            name="email"
-            type="email"
+            id="phone"
+            name="phone"
+            type="phone"
             className="w-full p-3 rounded bg-gray-800 dark:bg-gray-100"
           />
         </div>

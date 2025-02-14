@@ -19,12 +19,12 @@ const Dashboard = () => {
                 {/* dashboard side bar */}
                 <ul className="menu p-4">
                     {
-                        isAdmin && (<>
-                        
-                        <li><NavLink to="/dashboard/all-employee-list">All Employee</NavLink></li>
-                        <li><NavLink to={`/dashboard/admin-home/`}>Admin Home</NavLink></li>
-                        <li><NavLink to='/dashboard/messages'>Messages</NavLink></li>
-                        <li><NavLink to="/">Home</NavLink></li>
+                        isAdmin && (
+                        <>
+                            <li><NavLink to="/dashboard/all-employee-list">All Employee</NavLink></li>
+                            <li><NavLink to={`/dashboard/admin-home/`}>Admin Home</NavLink></li>
+                            <li><NavLink to='/dashboard/messages'>Messages</NavLink></li>
+                            <li><NavLink to="/">Home</NavLink></li>
                         </> 
 
                     )
