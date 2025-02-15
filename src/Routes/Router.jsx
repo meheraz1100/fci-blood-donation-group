@@ -19,7 +19,10 @@ import AllVolunteers from "../Pages/Shared/AllVOlunteers/AllVolunteers";
 import PendingVolunteers from "../Pages/Dashboard/PendingVolunteers/PendingVolunteers";
 import VerifiedVolunteers from "../Pages/Dashboard/VerifiedVolunteers/VerifiedVolunteers";
 import Feedback from "../Pages/Dashboard/Feedback/Feedback";
-
+import AddAchivement from "../Pages/Dashboard/AddAchivement/AddAchivement";
+import Achivements from "../Pages/Dashboard/Achivements/Achivements"
+import AddDonatingMoment from "../Pages/Dashboard/AddDonatingMoment/AddDonatingMoment";
+import DonationMoments from "../Pages/Dashboard/DonationMoments/DonationMoments";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -64,6 +67,25 @@ export const router = createBrowserRouter([
           path: "/feedbacks",
           element: <Feedback></Feedback>,
           loader: () => fetch('https://fci-blood-donation-group.vercel.app/feedbacks')
+        },
+        {
+          path: "/addAchivement",
+          element: <AddAchivement></AddAchivement>
+        },
+        {
+          path: "/achivements",
+          element: <Achivements></Achivements>,
+          loader: () => fetch('https://fci-blood-donation-group.vercel.app/achivements')
+        },
+        // add-donating-moment
+        {
+          path: "/add-donating-moment",
+          element: <AddDonatingMoment></AddDonatingMoment>
+        },
+        {
+          path: "/donation-moments",
+          element: <DonationMoments></DonationMoments>,
+          loader: () => fetch('https://fci-blood-donation-group.vercel.app/donating-moments')
         }
     ]
   },

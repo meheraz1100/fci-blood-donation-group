@@ -36,7 +36,6 @@ const SignUp = () => {
       // now send the user info data to the server with the imageURL
       const user = {
         name: data.name,
-        // salary: parseFloat(data.salary),
         email: data.email,
         phone_number: parseFloat(data.phone_number),
         batchNo: data.batchNo,
@@ -44,14 +43,21 @@ const SignUp = () => {
         image: res.data.data.display_url,
         password: data.password,
         role: "volunteer",
-        verify: "false"
+        verify: "false",
       };
       //
       const userRes = await axiosPublic.post("/volunteers", user);
       console.log(userRes.data);
       if (userRes.data.insertedId) {
-        // show success pop up
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "User Successfully Created!!! Login Now!!",
+          showConfirmButton: false,
+          timer: 3000,
+        });
       }
+      navigate("/");
     }
     console.log("with image url", res.data);
 
@@ -65,7 +71,6 @@ const SignUp = () => {
           const userInfo = {
             name: data.name,
             batchNo: data.batchNo,
-            // salary: parseFloat(data.salary),
             email: data.email,
             bloodGroup: data.bloodGroup,
             phone_number: data.phone_number,
@@ -100,7 +105,6 @@ const SignUp = () => {
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold">Sign Up now!</h1>
-            
           </div>
           <div className="card shrink-0 w-full max-w-lg shadow-2xl bg-base-100">
             <form className="p-2" onSubmit={handleSubmit(onSubmit)}>
@@ -208,7 +212,6 @@ const SignUp = () => {
                 </select>
               </div>
 
-
               <div className="form-control w-full my-6">
                 <div className="label">
                   <span className="label-text">Blood Group</span>
@@ -231,8 +234,6 @@ const SignUp = () => {
                   <option value="AB-">AB-</option>
                 </select>
               </div>
-
-
 
               <div className="form-control">
                 <label className="label">
@@ -296,6 +297,13 @@ const SignUp = () => {
                 </Link>
               </small>
             </p>
+            <div className="text-center">
+              <Link to="/">
+                <button className="btn btn-wide btn-info text-white m-3">
+                  Go Home
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

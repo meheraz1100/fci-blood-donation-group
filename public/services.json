@@ -1,4 +1,11 @@
 [
+    
+    {
+        "service_type": "উপদেষ্টা",
+        "service_name": "হেলাল উদ্দিন",
+        "img_url" : "https://i.ibb.co.com/h5N1Wd7/Whats-App-Image-2025-02-14-at-3-59-11-PM.jpg",
+        "description": "Manages job postings, applications, and streamlines the recruitment process."
+    },
     {
         "service_type": "সভাপতি",
         "service_name": "আতিকুর রহমান মজুমদার",
@@ -8,7 +15,7 @@
     {
         "service_type": "সহ সভাপতি",
         "service_name": "কাজী মুহাম্মদ আল সাইফ",
-        "img_url" : "https://i.ibb.co.com/XZCp4qY0/download-1.png",
+        "img_url" : "https://i.ibb.co/ds3WTTGJ/IMG-20250214-WA0194.jpg",
         "description": "Automates and simplifies the new hire process, ensuring a smooth transition."
     },
     {

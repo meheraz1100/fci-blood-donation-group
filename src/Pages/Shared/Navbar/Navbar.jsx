@@ -1,17 +1,19 @@
 import { useContext } from "react";
 import { AuthContext } from "../../../Providers/AuthProviders";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { FaUserCircle } from "react-icons/fa";
 import useAdmin from "../../../Hooks/useAdmin";
 
 const Navbar = () => {
   const [isAdmin] = useAdmin();
+  const navigate = useNavigate()
   const { user, logOut } = useContext(AuthContext);
   // const [ isAdmin ] = useAdmin();
 
   const handleLogOut = () => {
     logOut().then(() => {});
+    navigate('/');
     toast.success("log out success").catch((error) => console.log(error));
   };
 
@@ -24,6 +26,9 @@ const Navbar = () => {
           </li>
           <li>
             <Link to="/profile">Profile</Link>
+          </li>
+          <li>
+            <Link to="/add-donating-moment">Add Donating Moment</Link>
           </li>
           <li>
             <button onClick={handleLogOut}>Logout</button>
@@ -52,6 +57,9 @@ const Navbar = () => {
           </li>
           <li>
             <Link to="/feedbacks">Feedback Messages</Link>
+          </li>
+          <li>
+            <Link to="/addAchivement">Add a Achivement</Link>
           </li>
         </>
       )}
@@ -105,20 +113,29 @@ const Navbar = () => {
               ) : (
                 <>
                   <div>
+                  <Link to="/" className="btn btn-md  dark:btn-ghost">
+                      <button>Home</button>
+                    </Link>
                     <Link
                       to="/all-volunteers"
-                      className="btn btn-lg dark:btn-ghost mr-3"
+                      className="btn btn-md dark:btn-ghost"
                     >
                       <button>All Volunteers</button>
                     </Link>
+                    <Link to="/achivements" className="btn btn-md dark:btn-ghost">
+                      <button>Achivements</button>
+                    </Link>
+                    <Link to="/login" className="btn btn-md  dark:btn-ghost">
+                      <button>Start Donating</button>
+                    </Link>
+                    <Link to="/donation-moments" className="btn btn-md  dark:btn-ghost">
+                      <button>Donation Moments</button>
+                    </Link>
                     <Link
                       to="/contact"
-                      className="btn btn-lg dark:btn-ghost mr-3"
+                      className="btn btn-md dark:btn-ghost"
                     >
                       <button>Give Feedback</button>
-                    </Link>
-                    <Link to="/login" className="btn btn-lg  dark:btn-ghost">
-                      <button>Start Donating</button>
                     </Link>
                   </div>
                 </>

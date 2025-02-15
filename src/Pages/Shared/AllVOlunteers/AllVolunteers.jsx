@@ -5,7 +5,7 @@ const AllVolunteers = () => {
   console.log(volunteers)
 
   return (
-    <div className=" w-full grid md:grid-cols-2 p-4 lg:grid-cols-4 gap-2">
+    <div className=" w-full grid grid-cols-2 p-4 lg:grid-cols-4 gap-2">
         {volunteers.map((volunteer) => (
             <div className="card card-compact bg-base-100 w-full shadow-xl" key={volunteer._id}>
             <figure>
@@ -17,6 +17,7 @@ const AllVolunteers = () => {
             <div className="card-body">
               <h2 className="card-title">{volunteer.name}</h2>
               <p>FCI Batch No. : {volunteer.batchNo}</p>
+              <p>Blood Group : {volunteer.bloodGroup}</p>
               <div className="card-actions font-bold justify-end">
                 <button className="">{volunteer.verify === 'true' ? "Verified" : "Unverified"}</button>
               </div>
