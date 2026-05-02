@@ -5,7 +5,7 @@ const VerifiedVolunteers = () => {
     const volunteers = useLoaderData()
 
     return (
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-2">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-2">
             {volunteers.map((volunteer) => (
                 <div className="card card-compact bg-base-100 lg:w-96 shadow-xl" key={volunteer._id}>
                 <figure>
@@ -18,6 +18,7 @@ const VerifiedVolunteers = () => {
                   <h2 className="card-title">{volunteer.name}</h2>
                   <p>FCI Batch : {volunteer.batchNo}</p>
                   <p>Blood Group : {volunteer?.bloodGroup}</p>
+                  <p>Blood Group : {volunteer?.phone_number}</p>
                   <div className="card-actions justify-end">
                   </div>
                 </div>

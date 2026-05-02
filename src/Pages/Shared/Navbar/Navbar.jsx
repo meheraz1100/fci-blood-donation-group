@@ -72,7 +72,7 @@ const Navbar = () => {
       <div className="navbar bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <div tabIndex={0} role="button" className="btn btn-ghost">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -87,6 +87,7 @@ const Navbar = () => {
                   d="M4 6h16M4 12h8m-8 6h16"
                 />
               </svg>
+              
             </div>
             <ul
               tabIndex={0}
@@ -142,17 +143,11 @@ const Navbar = () => {
               )}
             </ul>
           </div>
-          <a
-            className="hidden lg:block lg:text-2xl text-xs font-bold tooltip tooltip-right"
-            href="/"
-            data-tip="Feni Computer Institute Blood Donation Group(FCI BDG)"
-          >
-            FCI BDG
-          </a>
+          
         </div>
 
         {/* desktop view */}
-        <div className="navbar-center hidden lg:flex">
+        {/* <div className="navbar-center hidden lg:flex">
           <ul className="px-1">
             {user ? (
               <div className="">
@@ -199,9 +194,9 @@ const Navbar = () => {
               </>
             )}
           </ul>
-        </div>
-        <div className=" lg:hidden">
-          <div className="font-bold text-2xl">
+        </div> */}
+        <div className=" navbar-end">
+          <div className="font-bold text-2xl ">
             <button>FCI BDG Web</button>
           </div>
         </div>
