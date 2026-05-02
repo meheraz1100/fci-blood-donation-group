@@ -18,7 +18,7 @@ const AllVolunteers = () => {
               <h2 className="card-title">{volunteer.name}</h2>
               <p>FCI Batch No. : {volunteer.batchNo}</p>
               <p>Blood Group : {volunteer.bloodGroup}</p>
-              <p>Phone Number : {volunteer?.phone_number}</p>
+              <p>Phone Number : 0{volunteer?.phone_number}</p>
               <div className="card-actions font-bold justify-end">
                 <button className="">{volunteer.verify === 'true' ? "Verified" : "Unverified"}</button>
               </div>
